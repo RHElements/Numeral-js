@@ -11,10 +11,9 @@
         define(factory);
     } else if (typeof module === 'object' && module.exports) {
         module.exports = factory();
-    } else {
-        global.numeral = factory();
     }
-}((this || window), function () {
+    global.numeral = factory();
+}((typeof window !== 'undefined' ? window : this), function () {
     /************************************
         Variables
     ************************************/
