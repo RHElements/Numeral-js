@@ -14,7 +14,7 @@
     } else {
         global.numeral = factory();
     }
-}(this, function () {
+}(this || window, function () {
     /************************************
         Variables
     ************************************/
