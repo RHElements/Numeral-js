@@ -14,7 +14,7 @@
     } else {
         global.numeral = factory();
     }
-}((this || window), function () {
+}(this, function () {
     /************************************
         Variables
     ************************************/
@@ -688,6 +688,10 @@
             symbol: '$'
         }
     });
+
+    if (typeof window !== 'undefined') {
+        window.numeral = numeral;
+    }
 
     return numeral;
 }));
